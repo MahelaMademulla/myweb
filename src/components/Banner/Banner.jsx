@@ -10,7 +10,7 @@ const Banner = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
 
   return (
-    <section id="about" className="py-10">
+    <section id="about" className="py-10 pt-20">
       <div className="container py-6 md:py-10 flex flex-col md:grid md:grid-cols-2 gap-8 space-y-6 md:space-y-0">
         
         {/* About the App - First on small screens, Left on larger screens */}
