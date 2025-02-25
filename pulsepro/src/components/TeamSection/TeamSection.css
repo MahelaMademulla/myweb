@@ -1,0 +1,74 @@
+.team-section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 150px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  margin: 10px;
+}
+
+.card-icon {
+  font-size: 24px;
+} 
+.team-section {
+  padding: 100px 0 60px; /* ⬅ Added more top padding */
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.team-title {
+  font-size: 2.8rem; /* Slightly bigger title */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px; /* Keeps space before cards */
+}
+
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px; /* ⬅ Increased spacing between cards */
+}
+
+.team-card {
+  width: 320px; /* ⬅ Increased card width */
+  padding: 25px; /* ⬅ Increased padding inside the card */
+  background: white;
+  border-radius: 16px; /* ⬅ Slightly more rounded */
+  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.team-card:hover {
+  transform: scale(1.07); /* Slightly bigger hover effect */
+}
+
+.team-avatar {
+  width: 140px;
+  height: 140px; /* ⬅ Increased avatar size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.team-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%; /* ⬅ Keeps the image perfectly round */
+  border: 4px solid #ddd; /* ⬅ Optional: Adds a subtle border */
+}
+
+.team-name {
+  margin-top: 12px;
+  font-size: 1.3rem; /* ⬅ Slightly bigger text */
+  font-weight: bold;
+  color: #444;
+}
