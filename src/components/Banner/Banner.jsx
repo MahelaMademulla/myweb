@@ -11,11 +11,11 @@ const Banner = () => {
 
   return (
     <section id="about" className="py-10">
-      <div className="container py-6 md:py-10 grid grid-cols-1 md:grid-cols-2 gap-8 space-y-6 md:space-y-0">
+      <div className="container py-6 md:py-10 flex flex-col md:grid md:grid-cols-2 gap-8 space-y-6 md:space-y-0">
         
-        {/* About the App Text First */}
-        <div className="flex flex-col justify-center order-2 md:order-1">
-          <div className="text-center md:text-left space-y-6">
+        {/* About the App - First on small screens, Left on larger screens */}
+        <div className="flex flex-col justify-center order-1 md:order-1 text-center md:text-left">
+          <div className="space-y-6">
             {/* Title */}
             <motion.h1
               initial={{ opacity: 0, scale: 0.5 }}
@@ -42,7 +42,7 @@ const Banner = () => {
             </motion.p>
 
             {/* Feature Cards */}
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-6 items-center md:items-start">
               
               {/* Card 1 */}
               <motion.div
@@ -52,7 +52,7 @@ const Banner = () => {
                 viewport={{ once: true }}
                 onMouseEnter={() => setHoveredCard(1)}
                 onMouseLeave={() => setHoveredCard(null)}
-                className={`flex items-center gap-4 p-4 rounded-full duration-300 hover:shadow-2xl ${
+                className={`flex items-center gap-4 p-4 rounded-full w-[90%] md:w-auto duration-300 hover:shadow-2xl ${
                   hoveredCard === 1 ? "bg-blue-400 text-white" : "bg-[#f4f4f4]"
                 }`}
               >
@@ -71,7 +71,7 @@ const Banner = () => {
                 viewport={{ once: true }}
                 onMouseEnter={() => setHoveredCard(2)}
                 onMouseLeave={() => setHoveredCard(null)}
-                className={`flex items-center gap-4 p-4 rounded-full duration-300 hover:shadow-2xl ${
+                className={`flex items-center gap-4 p-4 rounded-full w-[90%] md:w-auto duration-300 hover:shadow-2xl ${
                   hoveredCard === 2 ? "bg-green-400 text-white" : "bg-[#f4f4f4]"
                 }`}
               >
@@ -90,7 +90,7 @@ const Banner = () => {
                 viewport={{ once: true }}
                 onMouseEnter={() => setHoveredCard(3)}
                 onMouseLeave={() => setHoveredCard(null)}
-                className={`flex items-center gap-4 p-4 rounded-full duration-300 hover:shadow-2xl ${
+                className={`flex items-center gap-4 p-4 rounded-full w-[90%] md:w-auto duration-300 hover:shadow-2xl ${
                   hoveredCard === 3 ? "bg-red-400 text-white" : "bg-[#f4f4f4]"
                 }`}
               >
@@ -105,8 +105,8 @@ const Banner = () => {
           </div>
         </div>
 
-        {/* Banner Image - Now on the Right */}
-        <div className="flex justify-center items-center order-1 md:order-2">
+        {/* Banner Image - Second on small screens, Right on larger screens */}
+        <div className="flex justify-center items-center order-2 md:order-2">
           <motion.img
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
