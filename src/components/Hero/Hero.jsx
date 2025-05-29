@@ -36,7 +36,7 @@ const Hero = () => {
               animate="animate"
               className="text-[36px] font-bold !leading-snug"
             >
-              Find strength in the walls around you. built{" "}
+              kFind strength in the walls around you. built{" "}
               <span className="text-secondary"> with past memories and future hopes</span><br></br>to empower you today.
             </motion.h1>
             <motion.div
